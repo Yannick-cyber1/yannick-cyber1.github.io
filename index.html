@@ -1,11 +1,12 @@
 <!DOCTYPE html>
-<html lang="de">
+<html lang="de" class="no-js">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>DECIDE – Finanzentscheidungen klar durchrechnen</title>
-  <meta name="description" content="DECIDE ist eine iPhone-App mit Rechnern für Finanzentscheidungen. Ohne Konto, ohne Werbung – alle Daten bleiben auf deinem Gerät.">
-  <meta name="theme-color" content="#2f6f5e">
+  <meta name="description" content="DECIDE ist eine iPhone-App mit Rechnern für Finanzentscheidungen: Wohnen, Mobilität, Sparen, Alltag und Kredite. Ohne Konto, ohne Werbung – alle Daten bleiben auf deinem Gerät.">
+  <meta name="theme-color" content="#0d1613">
+  <script>document.documentElement.className = 'js';</script>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -16,7 +17,8 @@
         DECIDE
       </a>
       <nav>
-        <a class="hide-sm" href="#so-gehts">So geht's</a>
+        <a class="hide-sm" href="#kategorien">Kategorien</a>
+        <a class="hide-sm" href="#ausprobieren">Ausprobieren</a>
         <a href="#preise">Preise</a>
         <a href="support.html">Support</a>
       </nav>
@@ -24,159 +26,325 @@
   </header>
 
   <main>
-    <!-- ========== HERO ========== -->
-    <div class="hero">
-      <div class="wrap">
-        <div>
-          <p class="pill rise"><span class="dot"></span> Neu für iPhone</p>
-          <h1 class="rise d1">Entscheide mit<br><span class="grad">klaren Zahlen.</span></h1>
-          <p class="lead rise d2">Kaufen oder leasen? Jetzt investieren oder später? DECIDE rechnet deine Finanzfragen in Ruhe durch und zeigt dir auf einen Blick, welche Möglichkeit sich lohnt.</p>
+    <!-- ================= HERO ================= -->
+    <div class="hero-outer">
+      <div class="hero">
+        <div class="wrap">
+          <div>
+            <p class="pill"><span class="dot"></span> Neu für iPhone</p>
+            <h1>
+              <span class="small">Finanzfragen klar durchgerechnet:</span>
+              <span class="rotator" id="rotator">
+                <span class="on">Auto kaufen oder leasen?</span>
+                <span>Mieten oder kaufen?</span>
+                <span>ETF oder Tagesgeld?</span>
+              </span>
+            </h1>
+            <p class="lead">DECIDE stellt deine Möglichkeiten gegenüber und zeigt dir in großen, klaren Zahlen, was sich wirklich lohnt. Für Wohnen, Mobilität, Sparen, Alltag und Kredite.</p>
 
-          <div class="cta-row rise d3">
-            <!-- ===== APP-STORE-LINK =====
-                 Sobald DECIDE im App Store ist, die nächste Zeile ersetzen durch:
-                 <a class="btn" href="HIER-DEN-APP-STORE-LINK-EINFUEGEN"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M16.4 12.6c0-2.3 1.9-3.4 2-3.5-1.1-1.6-2.8-1.8-3.4-1.8-1.4-.1-2.8.9-3.5.9s-1.8-.9-3-.8c-1.5 0-3 .9-3.8 2.3-1.6 2.8-.4 7 1.2 9.3.8 1.1 1.7 2.4 2.9 2.3 1.2 0 1.6-.7 3-.7s1.8.7 3 .7c1.3 0 2.1-1.1 2.8-2.3.9-1.3 1.3-2.6 1.3-2.6s-2.5-1-2.5-3.8zM14.2 5.8c.6-.8 1.1-1.8 1-2.8-.9 0-2 .6-2.7 1.4-.6.7-1.1 1.7-1 2.7 1 .1 2-.5 2.7-1.3z"/></svg>Im App Store laden</a>
-            -->
-            <a class="btn disabled" href="#"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M16.4 12.6c0-2.3 1.9-3.4 2-3.5-1.1-1.6-2.8-1.8-3.4-1.8-1.4-.1-2.8.9-3.5.9s-1.8-.9-3-.8c-1.5 0-3 .9-3.8 2.3-1.6 2.8-.4 7 1.2 9.3.8 1.1 1.7 2.4 2.9 2.3 1.2 0 1.6-.7 3-.7s1.8.7 3 .7c1.3 0 2.1-1.1 2.8-2.3.9-1.3 1.3-2.6 1.3-2.6s-2.5-1-2.5-3.8zM14.2 5.8c.6-.8 1.1-1.8 1-2.8-.9 0-2 .6-2.7 1.4-.6.7-1.1 1.7-1 2.7 1 .1 2-.5 2.7-1.3z"/></svg>Bald im App Store</a>
-            <a href="#so-gehts">So funktioniert's →</a>
-          </div>
-          <div class="trust rise d3">
-            <span>Kein Konto</span><span>Keine Werbung</span><span>Daten bleiben auf dem iPhone</span>
-          </div>
-        </div>
-
-        <!-- Beispiel-Bildschirm (kann später durch einen echten Screenshot ersetzt werden) -->
-        <div class="phone-stage" aria-hidden="true">
-          <div class="phone">
-            <div class="screen">
-              <div class="s-label">Mobilität</div>
-              <div class="s-title">Auto kaufen oder leasen?</div>
-              <div class="s-card">
-                <div class="s-row"><span>Kaufen · 4 Jahre</span><b>18.400 €</b></div>
-                <div class="s-bar"><i style="width:74%"></i></div>
-              </div>
-              <div class="s-card">
-                <div class="s-row"><span>Leasen · 4 Jahre</span><b>21.600 €</b></div>
-                <div class="s-bar b"><i style="width:88%"></i></div>
-              </div>
-              <div class="s-card">
-                <div class="s-row"><span>Restwert danach</span><b>9.800 €</b></div>
-              </div>
-              <div class="s-result">
-                <small>Kaufen spart dir</small>
-                <div class="big">3.200 €</div>
-              </div>
+            <div class="cta-row">
+              <!-- ===== APP-STORE-LINK =====
+                   Sobald DECIDE im App Store ist: in der nächsten Zeile
+                   class="btn light disabled" ändern in class="btn light",
+                   href="#" ersetzen durch den App-Store-Link
+                   und "Bald im App Store" ändern in "Im App Store laden". -->
+              <a class="btn light disabled" href="#"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M16.4 12.6c0-2.3 1.9-3.4 2-3.5-1.1-1.6-2.8-1.8-3.4-1.8-1.4-.1-2.8.9-3.5.9s-1.8-.9-3-.8c-1.5 0-3 .9-3.8 2.3-1.6 2.8-.4 7 1.2 9.3.8 1.1 1.7 2.4 2.9 2.3 1.2 0 1.6-.7 3-.7s1.8.7 3 .7c1.3 0 2.1-1.1 2.8-2.3.9-1.3 1.3-2.6 1.3-2.6s-2.5-1-2.5-3.8zM14.2 5.8c.6-.8 1.1-1.8 1-2.8-.9 0-2 .6-2.7 1.4-.6.7-1.1 1.7-1 2.7 1 .1 2-.5 2.7-1.3z"/></svg>Bald im App Store</a>
+              <a class="link-arrow" href="#ausprobieren">Jetzt ausprobieren →</a>
+            </div>
+            <div class="trust">
+              <span>Kein Konto</span><span>Keine Werbung</span><span>Daten bleiben auf dem iPhone</span>
             </div>
           </div>
-          <div class="float-chip chip-1">
-            <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg></span>
-            100 % privat
-          </div>
-          <div class="float-chip chip-2">
-            <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L4 14h7l-1 8 9-12h-7z"/></svg></span>
-            Ergebnis in Sekunden
+
+          <!-- Handy mit wechselnden Beispiel-Bildschirmen -->
+          <div class="phone-stage" aria-hidden="true">
+            <div class="phone">
+              <div class="screen-wrap" id="screens">
+                <!-- 1: Mobilität -->
+                <div class="screen on">
+                  <div class="s-top"><span class="s-label" style="color:#3a6bd6">Mobilität</span><span class="s-demo">Beispielwerte</span></div>
+                  <div class="s-title">Auto kaufen oder leasen?</div>
+                  <div class="s-card"><div class="s-row"><span>Kaufen · 4 Jahre</span><b>18.400 €</b></div><div class="s-bar"><i style="width:74%;background:#3a6bd6"></i></div></div>
+                  <div class="s-card"><div class="s-row"><span>Leasen · 4 Jahre</span><b>21.600 €</b></div><div class="s-bar"><i style="width:88%;background:#e39a3b"></i></div></div>
+                  <div class="s-card"><div class="s-row"><span>Restwert danach</span><b>9.800 €</b></div></div>
+                  <div class="s-result" style="background:linear-gradient(140deg,#5b8ff0,#3a6bd6)"><small>Kaufen spart dir</small><div class="big">3.200 €</div></div>
+                </div>
+                <!-- 2: Wohnen -->
+                <div class="screen">
+                  <div class="s-top"><span class="s-label" style="color:#2f8f6f">Wohnen</span><span class="s-demo">Beispielwerte</span></div>
+                  <div class="s-title">Mieten oder kaufen?</div>
+                  <div class="s-card"><div class="s-row"><span>Miete · 20 J.</span><b>286.000 €</b></div><div class="s-bar"><i style="width:90%;background:#e39a3b"></i></div></div>
+                  <div class="s-card"><div class="s-row"><span>Kauf · 20 J.</span><b>241.000 €</b></div><div class="s-bar"><i style="width:76%;background:#2f8f6f"></i></div></div>
+                  <div class="s-card"><div class="s-row"><span>Monatlich (Kauf)</span><b>1.150 €</b></div></div>
+                  <div class="s-result" style="background:linear-gradient(140deg,#4fb18c,#2f8f6f)"><small>Kaufen günstiger um</small><div class="big">45.000 €</div></div>
+                </div>
+                <!-- 3: Sparen -->
+                <div class="screen">
+                  <div class="s-top"><span class="s-label" style="color:#cf8318">Sparen &amp; Anlegen</span><span class="s-demo">Beispielwerte</span></div>
+                  <div class="s-title">ETF oder Tagesgeld?</div>
+                  <div class="s-card"><div class="s-row"><span>ETF · 5 % p. a.</span><b>82.207 €</b></div><div class="s-bar"><i style="width:92%;background:#cf8318"></i></div></div>
+                  <div class="s-card"><div class="s-row"><span>Tagesgeld · 2 % p. a.</span><b>58.959 €</b></div><div class="s-bar"><i style="width:66%;background:#9aa0a6"></i></div></div>
+                  <div class="s-card"><div class="s-row"><span>200 € · 20 Jahre</span><b>48.000 €</b></div></div>
+                  <div class="s-result" style="background:linear-gradient(140deg,#efa743,#cf8318)"><small>Unterschied</small><div class="big">23.248 €</div></div>
+                </div>
+              </div>
+            </div>
+            <div class="float-chip chip-1">
+              <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg></span>
+              100 % privat
+            </div>
+            <div class="float-chip chip-2">
+              <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L4 14h7l-1 8 9-12h-7z"/></svg></span>
+              Ergebnis in Sekunden
+            </div>
           </div>
         </div>
       </div>
     </div>
 
-    <!-- ========== SO GEHT'S ========== -->
-    <section class="alt" id="so-gehts">
+    <!-- ================= LAUFBAND ================= -->
+    <div class="marquee" aria-label="Beispielfragen">
+      <div class="marquee-row">
+        <span class="q"><i style="background:var(--c-wohnen)"></i>Mieten oder kaufen?</span>
+        <span class="q"><i style="background:var(--c-mobil)"></i>E-Auto oder Verbrenner?</span>
+        <span class="q"><i style="background:var(--c-sparen)"></i>Einmal anlegen oder monatlich?</span>
+        <span class="q"><i style="background:var(--c-alltag)"></i>Handy mit Vertrag oder ohne?</span>
+        <span class="q"><i style="background:var(--c-kredit)"></i>Dispo oder Ratenkredit?</span>
+        <span class="q"><i style="background:var(--c-wohnen)"></i>Sondertilgung oder anlegen?</span>
+        <span class="q"><i style="background:var(--c-alltag)"></i>Ratenkauf oder sofort zahlen?</span>
+        <!-- Wiederholung für das endlose Laufband -->
+        <span class="q" aria-hidden="true"><i style="background:var(--c-wohnen)"></i>Mieten oder kaufen?</span>
+        <span class="q" aria-hidden="true"><i style="background:var(--c-mobil)"></i>E-Auto oder Verbrenner?</span>
+        <span class="q" aria-hidden="true"><i style="background:var(--c-sparen)"></i>Einmal anlegen oder monatlich?</span>
+        <span class="q" aria-hidden="true"><i style="background:var(--c-alltag)"></i>Handy mit Vertrag oder ohne?</span>
+        <span class="q" aria-hidden="true"><i style="background:var(--c-kredit)"></i>Dispo oder Ratenkredit?</span>
+        <span class="q" aria-hidden="true"><i style="background:var(--c-wohnen)"></i>Sondertilgung oder anlegen?</span>
+        <span class="q" aria-hidden="true"><i style="background:var(--c-alltag)"></i>Ratenkauf oder sofort zahlen?</span>
+      </div>
+      <div class="marquee-row rev">
+        <span class="q"><i style="background:var(--c-mobil)"></i>Auto oder Deutschlandticket?</span>
+        <span class="q"><i style="background:var(--c-sparen)"></i>ETF oder Tagesgeld?</span>
+        <span class="q"><i style="background:var(--c-kredit)"></i>Umschulden – ja oder nein?</span>
+        <span class="q"><i style="background:var(--c-alltag)"></i>Lohnt sich das Abo noch?</span>
+        <span class="q"><i style="background:var(--c-wohnen)"></i>Wie viel Haus kann ich mir leisten?</span>
+        <span class="q"><i style="background:var(--c-sparen)"></i>Was frisst die Inflation?</span>
+        <span class="q"><i style="background:var(--c-mobil)"></i>Auto kaufen oder leasen?</span>
+        <span class="q" aria-hidden="true"><i style="background:var(--c-mobil)"></i>Auto oder Deutschlandticket?</span>
+        <span class="q" aria-hidden="true"><i style="background:var(--c-sparen)"></i>ETF oder Tagesgeld?</span>
+        <span class="q" aria-hidden="true"><i style="background:var(--c-kredit)"></i>Umschulden – ja oder nein?</span>
+        <span class="q" aria-hidden="true"><i style="background:var(--c-alltag)"></i>Lohnt sich das Abo noch?</span>
+        <span class="q" aria-hidden="true"><i style="background:var(--c-wohnen)"></i>Wie viel Haus kann ich mir leisten?</span>
+        <span class="q" aria-hidden="true"><i style="background:var(--c-sparen)"></i>Was frisst die Inflation?</span>
+        <span class="q" aria-hidden="true"><i style="background:var(--c-mobil)"></i>Auto kaufen oder leasen?</span>
+      </div>
+    </div>
+
+    <!-- ================= KATEGORIEN ================= -->
+    <section id="kategorien">
       <div class="wrap">
-        <div class="sec-head">
+        <div class="sec-head reveal">
+          <p class="kicker">Kategorien</p>
+          <h2>Für die großen und kleinen Geldfragen.</h2>
+          <p>Fünf Themen, viele Rechner. Jeder beantwortet genau eine Frage – verständlich und ohne Fachchinesisch.</p>
+        </div>
+
+        <div class="bento">
+          <!-- Wohnen (groß) -->
+          <article class="tile wohnen reveal">
+            <div class="tile-head">
+              <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l9-7 9 7"/><path d="M5 10v10h14V10"/><path d="M10 20v-6h4v6"/></svg></div>
+              <div><h3>Wohnen</h3><p class="sub">Die größte Entscheidung – gut durchgerechnet.</p></div>
+            </div>
+            <div class="tile-body">
+              <ul class="examples">
+                <li>Mieten oder kaufen?</li>
+                <li>Wie viel Haus kann ich mir leisten?</li>
+                <li>Sondertilgung oder lieber anlegen?</li>
+                <li>Lohnt sich der Umzug in die günstigere Wohnung?</li>
+              </ul>
+              <div class="mini-chart">
+                <div class="mc-title">Kosten über 20 Jahre</div>
+                <div class="mc-bars" aria-hidden="true">
+                  <div style="height:45%"></div><div style="height:60%"></div><div style="height:100%"></div>
+                  <div style="height:38%"></div><div style="height:52%"></div><div class="hi" style="height:84%"></div>
+                </div>
+                <div class="mc-legend"><span>Mieten</span><span>Kaufen</span></div>
+                <div class="mc-big">45.000 €<small>Unterschied im Beispiel</small></div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Mobilität -->
+          <article class="tile mobil reveal d1">
+            <div class="tile-head">
+              <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 17h14v-5l-2-5H7l-2 5z"/><circle cx="7.5" cy="17" r="2"/><circle cx="16.5" cy="17" r="2"/><path d="M5 12h14"/></svg></div>
+              <div><h3>Mobilität</h3><p class="sub">Was dich das Unterwegssein kostet.</p></div>
+            </div>
+            <ul class="examples">
+              <li>Auto kaufen oder leasen?</li>
+              <li>E-Auto oder Verbrenner?</li>
+              <li>Auto oder Deutschlandticket?</li>
+            </ul>
+          </article>
+
+          <!-- Sparen -->
+          <article class="tile sparen reveal">
+            <div class="tile-head">
+              <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17l6-6 4 4 8-8"/><path d="M15 7h6v6"/></svg></div>
+              <div><h3>Sparen &amp; Anlegen</h3><p class="sub">Damit dein Geld für dich arbeitet.</p></div>
+            </div>
+            <ul class="examples">
+              <li>ETF-Sparplan oder Tagesgeld?</li>
+              <li>Einmal anlegen oder monatlich?</li>
+              <li>Was frisst die Inflation?</li>
+            </ul>
+          </article>
+
+          <!-- Alltag -->
+          <article class="tile alltag reveal d1">
+            <div class="tile-head">
+              <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 6h15l-1.5 9h-12z"/><path d="M6 6L5 3H2"/><circle cx="9" cy="20" r="1.5"/><circle cx="18" cy="20" r="1.5"/></svg></div>
+              <div><h3>Alltag &amp; Konsum</h3><p class="sub">Kleine Ausgaben, große Wirkung.</p></div>
+            </div>
+            <ul class="examples">
+              <li>Ratenkauf oder sofort zahlen?</li>
+              <li>Handy mit Vertrag oder ohne?</li>
+              <li>Lohnt sich das Abo noch?</li>
+            </ul>
+          </article>
+
+          <!-- Kredit -->
+          <article class="tile kredit reveal d2">
+            <div class="tile-head">
+              <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="5" width="20" height="14" rx="3"/><path d="M2 10h20"/><path d="M6 15h4"/></svg></div>
+              <div><h3>Kredit &amp; Schulden</h3><p class="sub">Schneller schuldenfrei, weniger Zinsen.</p></div>
+            </div>
+            <ul class="examples">
+              <li>Umschulden – ja oder nein?</li>
+              <li>Dispo oder Ratenkredit?</li>
+              <li>Welchen Kredit zuerst tilgen?</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= AUSPROBIEREN ================= -->
+    <section id="ausprobieren" style="padding-top:20px">
+      <div class="wrap">
+        <div class="sec-head reveal">
+          <p class="kicker">Ausprobieren</p>
+          <h2>Spür selbst, wie klar Zahlen sein können.</h2>
+          <p>Ein kleiner Vorgeschmack: Schieb die Regler und sieh sofort, was aus deinem monatlichen Sparbetrag werden kann.</p>
+        </div>
+
+        <div class="demo reveal">
+          <div class="demo-in">
+            <h3>Sparplan-Rechner</h3>
+            <p class="hint">Wie viel legst du zur Seite – und wie lange?</p>
+            <div class="field">
+              <label for="rate"><span>Monatlich</span><output id="rateOut" class="tabnum">200 €</output></label>
+              <input id="rate" type="range" min="25" max="1000" step="25" value="200">
+            </div>
+            <div class="field">
+              <label for="years"><span>Laufzeit</span><output id="yearsOut" class="tabnum">20 Jahre</output></label>
+              <input id="years" type="range" min="1" max="40" step="1" value="20">
+            </div>
+          </div>
+
+          <div class="demo-out" aria-live="polite">
+            <div class="headline-result">Mit einem ETF-Sparplan statt Sparschwein mehr:<span class="huge" id="diff">+34.207 €</span></div>
+            <div class="res-rows">
+              <div class="res etf"><div class="top"><span>ETF-Sparplan (5 % p. a.)</span><b id="vEtf">82.207 €</b></div><div class="bar"><i id="bEtf" style="width:100%"></i></div></div>
+              <div class="res tg"><div class="top"><span>Tagesgeld (2 % p. a.)</span><b id="vTg">58.959 €</b></div><div class="bar"><i id="bTg" style="width:72%"></i></div></div>
+              <div class="res box"><div class="top"><span>Sparschwein (eingezahlt)</span><b id="vBox">48.000 €</b></div><div class="bar"><i id="bBox" style="width:58%"></i></div></div>
+            </div>
+            <p class="disclaimer">Beispielrechnung mit angenommenen, gleichbleibenden Zinsen, ohne Steuern und Kosten. Keine Anlageberatung – echte Renditen schwanken.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= SO GEHT'S ================= -->
+    <section id="so-gehts" style="padding-top:40px">
+      <div class="wrap">
+        <div class="sec-head center reveal">
           <p class="kicker">So geht's</p>
-          <h2>In drei Schritten zur klaren Antwort.</h2>
-          <p>Keine Tabellen, kein Fachchinesisch. Nur deine Zahlen und ein klares Ergebnis.</p>
+          <h2>Drei Schritte. Eine klare Antwort.</h2>
         </div>
         <div class="steps">
-          <div class="step">
-            <h3>Frage wählen</h3>
-            <p>Such dir den passenden Rechner aus – übersichtlich nach Kategorien sortiert.</p>
-          </div>
-          <div class="step">
-            <h3>Werte eintragen</h3>
-            <p>Gib deine eigenen Zahlen ein. Die App erklärt dir, was jedes Feld bedeutet.</p>
-          </div>
-          <div class="step">
-            <h3>Ergebnis sehen</h3>
-            <p>DECIDE stellt die Möglichkeiten gegenüber und zeigt dir den Unterschied in großen Zahlen.</p>
-          </div>
+          <div class="step reveal"><div class="num">1</div><h3>Frage wählen</h3><p>Such dir den passenden Rechner – sortiert nach Kategorien.</p></div>
+          <div class="step reveal d1"><div class="num">2</div><h3>Zahlen eintragen</h3><p>Nur deine eigenen Werte – mehr braucht es nicht.</p></div>
+          <div class="step reveal d2"><div class="num">3</div><h3>Ergebnis sehen</h3><p>Die Möglichkeiten im direkten Vergleich, in großen Zahlen.</p></div>
         </div>
       </div>
     </section>
 
-    <!-- ========== VORTEILE ========== -->
-    <section>
-      <div class="wrap">
-        <div class="sec-head">
-          <p class="kicker">Warum DECIDE</p>
-          <h2>Gebaut für ruhige, gute Entscheidungen.</h2>
-        </div>
-        <div class="features">
-          <div class="feature">
-            <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg></div>
-            <h3>Klar sortiert</h3>
-            <p>Rechner nach Kategorien – du findest sofort den richtigen.</p>
+    <!-- ================= DATENSCHUTZ-BAND ================= -->
+    <div class="privacy-outer">
+      <div class="privacy">
+        <div class="wrap">
+          <div class="reveal">
+            <p class="kicker" style="color:#8be0c0">Privatsphäre</p>
+            <h2>Deine Zahlen gehören <em>dir.</em></h2>
+            <p>Gehalt, Miete, Ersparnisse – das geht niemanden etwas an. Darum bleibt bei DECIDE alles auf deinem iPhone.</p>
           </div>
-          <div class="feature">
-            <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/><path d="M9 12l2 2 4-4"/></svg></div>
-            <h3>Privat</h3>
-            <p>Alles bleibt auf deinem iPhone. Kein Konto, keine Cloud, kein Tracking.</p>
-          </div>
-          <div class="feature">
-            <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M5.6 5.6l12.8 12.8"/></svg></div>
-            <h3>Ohne Werbung</h3>
-            <p>Keine Anzeigen, kein Abo. Nur das, was du wirklich brauchst.</p>
-          </div>
-          <div class="feature">
-            <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg></div>
-            <h3>Hell &amp; Dunkel</h3>
-            <p>Ruhiges Design mit großen Zahlen – tagsüber und abends angenehm.</p>
+          <div class="p-list">
+            <div class="p-item reveal d1">
+              <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21c1.5-4 4.5-6 8-6s6.5 2 8 6"/><path d="M3 3l18 18"/></svg></div>
+              <div><b>Kein Konto</b><span>Einfach öffnen und loslegen.</span></div>
+            </div>
+            <div class="p-item reveal d2">
+              <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 18a5 5 0 0 1-.5-10A6 6 0 0 1 18 9a4.5 4.5 0 0 1 0 9"/><path d="M3 3l18 18"/></svg></div>
+              <div><b>Keine Cloud</b><span>Deine Eingaben verlassen nie dein Gerät.</span></div>
+            </div>
+            <div class="p-item reveal d3">
+              <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M5.6 5.6l12.8 12.8"/></svg></div>
+              <div><b>Keine Werbung, kein Tracking</b><span>Nur du und deine Zahlen.</span></div>
+            </div>
           </div>
         </div>
       </div>
-    </section>
+    </div>
 
-    <!-- ========== PREISE ========== -->
-    <section class="alt" id="preise">
+    <!-- ================= PREISE ================= -->
+    <section id="preise">
       <div class="wrap">
-        <div class="sec-head">
+        <div class="sec-head center reveal">
           <p class="kicker">Preise</p>
           <h2>Einmal zahlen. Für immer nutzen.</h2>
-          <p>Kauf nur, was du brauchst – oder gleich alles.</p>
+          <p>Kein Abo. Kauf nur, was du brauchst – oder gleich alles.</p>
         </div>
         <div class="prices">
-          <div class="price">
+          <div class="price reveal">
             <div class="what">Einzelner Rechner</div>
             <div class="num">0,99 €</div>
-            <div class="label">Perfekt für eine konkrete Frage.</div>
+            <div class="label">Für die eine Frage, die dich gerade beschäftigt.</div>
           </div>
-          <div class="price">
+          <div class="price reveal d1">
             <div class="what">Ganze Kategorie</div>
             <div class="num">1,99 €</div>
-            <div class="label">Alle Rechner eines Themas.</div>
+            <div class="label">Alle Rechner eines Themas, z. B. Wohnen.</div>
           </div>
-          <div class="price highlight">
+          <div class="price highlight reveal d2">
             <span class="badge">Bester Wert</span>
             <div class="what">Alle Rechner</div>
             <div class="num">4,99 €</div>
-            <div class="label">Alles freigeschaltet – auch zukünftige.</div>
+            <div class="label">Alle Kategorien freigeschaltet.</div>
           </div>
         </div>
-        <p class="note">Einmalige Käufe über den App Store, kein Abo.</p>
+        <p class="note" style="text-align:center">Einmalige Käufe über den App Store.</p>
       </div>
     </section>
 
-    <!-- ========== ABSCHLUSS ========== -->
+    <!-- ================= ABSCHLUSS ================= -->
     <section class="final">
-      <div class="wrap">
-        <div class="box">
-          <h2>Bereit für deine nächste Entscheidung?</h2>
-          <p>Hol dir DECIDE aufs iPhone und rechne es einfach einmal durch.</p>
-          <div class="cta-row">
-            <!-- Auch hier später den App-Store-Link einsetzen -->
-            <a class="btn accent disabled" href="#">Bald im App Store</a>
-          </div>
+      <div class="wrap reveal">
+        <h2>Weniger grübeln. <span>Besser entscheiden.</span></h2>
+        <p>Hol dir DECIDE aufs iPhone und rechne deine nächste Entscheidung einfach einmal durch.</p>
+        <div class="cta-row">
+          <!-- Auch hier später den App-Store-Link einsetzen (wie oben beschrieben) -->
+          <a class="btn disabled" href="#">Bald im App Store</a>
         </div>
       </div>
     </section>
@@ -192,5 +360,61 @@
       </nav>
     </div>
   </footer>
+
+  <script>
+  (function () {
+    var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    /* --- wechselnde Frage + passender Handy-Bildschirm --- */
+    var words = document.querySelectorAll('#rotator > span');
+    var screens = document.querySelectorAll('#screens .screen');
+    var i = 0;
+    if (!reduce && words.length > 1) {
+      setInterval(function () {
+        words[i].classList.remove('on'); screens[i].classList.remove('on');
+        i = (i + 1) % words.length;
+        words[i].classList.add('on'); screens[i].classList.add('on');
+      }, 3400);
+    }
+
+    /* --- Einblenden beim Scrollen --- */
+    var items = document.querySelectorAll('.reveal');
+    if ('IntersectionObserver' in window && !reduce) {
+      var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+      }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+      items.forEach(function (el) { io.observe(el); });
+    } else {
+      items.forEach(function (el) { el.classList.add('in'); });
+    }
+
+    /* --- Sparplan-Rechner --- */
+    var fmt = new Intl.NumberFormat('de-DE', { maximumFractionDigits: 0 });
+    function eur(v) { return fmt.format(Math.round(v)) + ' €'; }
+    function fv(m, annual, years) {
+      var n = years * 12, r = annual / 12;
+      return r === 0 ? m * n : m * (Math.pow(1 + r, n) - 1) / r;
+    }
+    var rate = document.getElementById('rate'), years = document.getElementById('years');
+    function paint(el) { var p = (el.value - el.min) / (el.max - el.min) * 100; el.style.setProperty('--p', p + '%'); }
+    function update() {
+      var m = +rate.value, y = +years.value;
+      var etf = fv(m, 0.05, y), tg = fv(m, 0.02, y), box = fv(m, 0, y);
+      document.getElementById('rateOut').textContent = eur(m);
+      document.getElementById('yearsOut').textContent = y + (y === 1 ? ' Jahr' : ' Jahre');
+      document.getElementById('vEtf').textContent = eur(etf);
+      document.getElementById('vTg').textContent = eur(tg);
+      document.getElementById('vBox').textContent = eur(box);
+      document.getElementById('diff').textContent = '+' + eur(etf - box);
+      document.getElementById('bEtf').style.width = '100%';
+      document.getElementById('bTg').style.width = (tg / etf * 100) + '%';
+      document.getElementById('bBox').style.width = (box / etf * 100) + '%';
+      paint(rate); paint(years);
+    }
+    rate.addEventListener('input', update);
+    years.addEventListener('input', update);
+    update();
+  })();
+  </script>
 </body>
 </html>
